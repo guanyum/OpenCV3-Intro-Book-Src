@@ -110,6 +110,7 @@ int main()
 	//------------------------ 3. 训练支持向量机 ----------------------------------------------------
 	cout << "Starting training process" << endl;
 	Ptr<SVM> svm = StatModel::train<SVM>(trainData, ROW_SAMPLE, labels, params);
+	StatModel::train<SVM>(trainData, 1);
 	cout << "Finished training process" << endl;
 
 	//------------------------ 4. 标出决策区域（decision regions）----------------------------------------
